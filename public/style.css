@@ -1,0 +1,4 @@
+:root{font-family:system-ui,-apple-system,sans-serif;color:#203145;background:#edf3f8}
+body{margin:0;padding:clamp(20px,5vw,64px)}main{max-width:680px;margin:auto;padding:36px;background:#fff;border-radius:15px;box-shadow:0 15px 40px #21374c14}
+header{font-size:12px;letter-spacing:.1em;color:#597189;font-weight:700}.item{display:flex;justify-content:space-between;background:#f1f5f9;padding:20px;border-radius:10px}
+button{padding:12px 21px;margin-top:18px;border:0;border-radius:8px;background:#166ab6;color:white;font-weight:700;cursor:pointer}button:disabled{opacity:.5}footer{margin-top:25px;font-size:13px;color:#748396}#result{font-weight:700}
