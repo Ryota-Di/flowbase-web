@@ -19,9 +19,9 @@ p = IDs();p.feed(html)
 for x in ('environment-bar','environment-name','app-version','feature','flow-preview','next','result'):
     assert p.ids.count(x) == 1,(x,p.ids)
 assert 'FLOWBASE_UI_V12' in css
-assert '/style.css?ui=v13' in html
-assert '/main.js?ui=v13' in html
-assert '/environment-banner.js?ui=v13' in html
+assert '/style.css?ui=v14' in html
+assert '/main.js?ui=v14' in html
+assert '/environment-banner.js?ui=v14' in html
 assert '[data-environment="prod"]' in css and '[data-environment="staging"]' in css
 assert '.environment-pill' in css and '.version-pill' in css
 assert 'background:' in css and '.checkout-card' in css

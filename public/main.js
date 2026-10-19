@@ -15,14 +15,13 @@
     throw new Error('Missing Checkout UI element');
   }
 
-  // Only v2 gets the distinctive release UI. The v1 main.js is untouched.
+  // Restrict the v14 appearance to v2. The v1 script remains unchanged.
   card.dataset.flowVersion = 'v2';
-  feature.textContent = 'もっとスムーズな購入体験';
+  feature.textContent = 'ワンクリック購入';
   preview.innerHTML = `
     <div class="one-click-panel">
-      <span class="one-click-symbol" aria-hidden="true">✓</span>
+      <span class="one-click-symbol" aria-hidden="true">→</span>
       <div class="one-click-copy">
-        <strong>ワンクリック購入</strong>
         <p>この画面から、そのまま購入手続きを完了できます。</p>
       </div>
     </div>`;
@@ -40,7 +39,7 @@
     result.innerHTML = `
       <span class="order-success-icon" aria-hidden="true">✓</span>
       <strong>注文デモが完了しました！</strong>
-      <span class="order-success-message">ワンクリック購入の新しい体験をご利用いただけました。</span>
+      <span class="order-success-message">ご購入ありがとうございます。</span>
       <span class="order-success-note">※ デモ画面のため、実際の決済・注文は発生していません。</span>`;
   });
 })().catch(() => {
