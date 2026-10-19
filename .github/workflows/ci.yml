@@ -19,6 +19,7 @@ jobs:
           python3 tests/test_visual.py
           python3 tests/test_ui_v12.py
           python3 tests/test_ui_v13.py
+          python3 tests/test_ui_v14.py
       - name: Docker build and live HTTP test
         run: |
           docker build -t flowbase-web:ci .

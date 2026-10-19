@@ -5,7 +5,7 @@ html=(r/'public/index.html').read_text(encoding='utf-8')
 css=(r/'public/style.css').read_text(encoding='utf-8')
 v2=(r/'public/main.js').read_text(encoding='utf-8')
 v1=(r/'demo/v1/main.js').read_text(encoding='utf-8')
-for src in ('/style.css?ui=v13','/main.js?ui=v13','/environment-banner.js?ui=v13'):
+for src in ('/style.css?ui=v14','/main.js?ui=v14','/environment-banner.js?ui=v14'):
     assert src in html, src
 assert 'FLOWBASE_UI_V13' in css
 assert 'checkout-card[data-flow-version="v2"]' in css
