@@ -49,3 +49,62 @@ button:disabled{opacity:.53;cursor:default}
 footer{margin-top:22px;font-size:12px;line-height:1.6;color:#7a8c9f}
 @media(max-width:650px){.topbar{flex-direction:column;align-items:stretch}.release-meta{justify-content:space-between}.checkout-body{padding:22px}.product-card{gap:12px;flex-wrap:wrap}.product-placeholder{height:65px;width:65px;font-size:29px}.price{margin-left:auto}.checkout-card{padding:19px}}
 @media(max-width:395px){.product-placeholder{display:none}.product-description strong{font-size:15px}.step{font-size:12px}}
+
+
+/* FLOWBASE_UI_V13: visible release changes are intentionally scoped to v2 only. */
+[hidden]{display:none!important}
+.checkout-card[data-flow-version="v2"]{
+  padding:clamp(24px,4vw,36px);
+  background:linear-gradient(140deg,#f1fcf7 0%,#ffffff 72%);
+  border:2px solid #9ddcc0;
+  box-shadow:0 14px 34px rgba(18,110,78,.10);
+}
+.checkout-card[data-flow-version="v2"] .feature-chip{display:none}
+.checkout-card[data-flow-version="v2"] .feature-heading{
+  margin:22px 0 16px;color:#126747;font-size:clamp(24px,3.5vw,31px);
+  font-weight:850;line-height:1.35;
+}
+.checkout-card[data-flow-version="v2"] .flow-preview{display:block;margin-bottom:20px;min-height:0}
+.one-click-panel{
+  display:flex;align-items:center;gap:20px;padding:26px;
+  border:1px solid #a7ddc2;border-radius:16px;background:#dcf6e9;
+}
+.one-click-symbol{
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  height:72px;width:72px;border-radius:20px;background:#167751;
+  color:#fff;font-size:42px;font-weight:850;
+}
+.one-click-copy{display:flex;flex-direction:column;gap:7px}
+.one-click-copy strong{font-size:clamp(24px,3.5vw,34px);letter-spacing:-.035em;color:#115b40;line-height:1.25}
+.one-click-copy p{margin:0;color:#376c55;font-size:14px;line-height:1.65}
+.checkout-card[data-flow-version="v2"] #next{
+  width:100%;min-height:62px;padding:17px 24px;
+  border-radius:12px;background:#13805b;box-shadow:0 6px 15px rgba(19,128,91,.20);
+  font-size:19px;
+}
+.checkout-card[data-flow-version="v2"] #next:hover{background:#0d6849}
+.checkout-card[data-flow-version="v2"] #result:not(.order-success){color:#4a7c65}
+.checkout-card[data-flow-version="v2"].is-complete{
+  background:#eafaf2;border-color:#7dc9a5;padding:32px;
+}
+.order-success{
+  display:flex;flex-direction:column;align-items:center;gap:12px;
+  text-align:center;margin:0;min-height:290px;justify-content:center;
+}
+.order-success-icon{
+  display:flex;align-items:center;justify-content:center;
+  height:100px;width:100px;border-radius:50%;background:#167751;color:#fff;
+  font-size:60px;line-height:1;
+}
+.order-success strong{color:#115b40;font-size:clamp(27px,4vw,38px);line-height:1.35}
+.order-success-message{font-size:16px;font-weight:600;color:#376c55;line-height:1.6}
+.order-success-note{margin-top:8px;font-size:12px;font-weight:400;color:#567668;line-height:1.6}
+@media(max-width:650px){
+  .one-click-panel{padding:20px;gap:14px}
+  .one-click-symbol{height:56px;width:56px;font-size:34px;border-radius:14px}
+  .checkout-card[data-flow-version="v2"].is-complete{padding:24px 18px}
+}
+@media(max-width:395px){
+  .one-click-panel{flex-direction:column;text-align:center}
+  .one-click-copy strong{font-size:25px}
+}
