@@ -1,0 +1,5 @@
+FROM nginxinc/nginx-unprivileged:1.30-alpine
+COPY public/ /usr/share/nginx/html/
+COPY demo/v1/main.js /usr/share/nginx/html/main.js
+COPY demo/v1/version.json /usr/share/nginx/html/version.json
+EXPOSE 8080

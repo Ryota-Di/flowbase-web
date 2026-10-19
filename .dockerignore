@@ -1,4 +1,8 @@
 *
 !Dockerfile
+!Dockerfile.v1
 !public/
 !public/**
+!demo/
+!demo/v1/
+!demo/v1/**

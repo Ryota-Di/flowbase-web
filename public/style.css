@@ -1,4 +1,12 @@
-:root{font-family:system-ui,-apple-system,sans-serif;color:#203145;background:#edf3f8}
-body{margin:0;padding:clamp(20px,5vw,64px)}main{max-width:680px;margin:auto;padding:36px;background:#fff;border-radius:15px;box-shadow:0 15px 40px #21374c14}
-header{font-size:12px;letter-spacing:.1em;color:#597189;font-weight:700}.item{display:flex;justify-content:space-between;background:#f1f5f9;padding:20px;border-radius:10px}
-button{padding:12px 21px;margin-top:18px;border:0;border-radius:8px;background:#166ab6;color:white;font-weight:700;cursor:pointer}button:disabled{opacity:.5}footer{margin-top:25px;font-size:13px;color:#748396}#result{font-weight:700}
+:root{font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN",sans-serif;color:#203145;background:#edf3f8}
+*{box-sizing:border-box}body{margin:0;padding:clamp(12px,4vw,48px)}main{max-width:680px;margin:auto;background:#fff;border-radius:15px;box-shadow:0 15px 40px #21374c14;overflow:hidden}
+.environment-bar{display:flex;align-items:center;justify-content:space-between;gap:18px;background:#28394f;color:white;padding:22px clamp(20px,4vw,36px)}
+.environment-bar[data-environment="prod"]{background:#153a64}.environment-bar[data-environment="staging"]{background:#146b58}
+.environment-info,.version-info{display:flex;flex-direction:column;gap:4px}.eyebrow{font-size:11px;letter-spacing:.12em;font-weight:750;opacity:.82}
+#environment-name{font-size:clamp(23px,4vw,33px);letter-spacing:.06em}#app-version{font-size:clamp(34px,6vw,48px);line-height:1.05}
+.environment-note{font-size:11px;opacity:.82}.version-info{text-align:right;flex-shrink:0}
+.content{padding:clamp(20px,4vw,36px)}h1{margin:0 0 18px;font-size:26px}.item{display:flex;justify-content:space-between;gap:12px;background:#f1f5f9;padding:20px;border-radius:10px}
+#feature{font-weight:700;margin:24px 0 13px}.flow-preview{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin-bottom:14px}.step{padding:8px 11px;border-radius:7px;border:1px solid #ccd7e3;background:#f7fafd;font-size:12px;font-weight:650}
+.step-arrow{font-size:13px;color:#596c81}.step.highlight{background:#e3f4ee;border-color:#84c6ab;color:#105c42}
+button{padding:13px 22px;margin-top:5px;border:0;border-radius:8px;background:#166ab6;color:white;font-weight:700;font-size:15px;cursor:pointer}button:disabled{opacity:.5}footer{margin-top:25px;font-size:13px;color:#748396}#result{font-weight:700}
+@media(max-width:440px){.environment-bar{padding:18px 16px;gap:8px}.eyebrow{font-size:9px}.step{font-size:11px;padding:6px}}

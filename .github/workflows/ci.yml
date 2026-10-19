@@ -14,6 +14,9 @@ jobs:
         run: |
           python3 tests/test_source.py
           node --check public/main.js
+          node --check public/environment-banner.js
+          node --check demo/v1/main.js
+          python3 tests/test_visual.py
       - name: Docker build and live HTTP test
         run: |
           docker build -t flowbase-web:ci .
@@ -30,3 +33,12 @@ jobs:
             sleep 1
           done
           curl --fail --silent http://127.0.0.1:19090/version.json | python3 -c 'import json,sys;d=json.load(sys.stdin);assert d["version"] in ("v1","v2")'
+          docker build -f Dockerfile.v1 -t flowbase-web:v1-smoke .
+          docker run -d --name flowbase-v1-smoke -p 127.0.0.1:19091:8080 flowbase-web:v1-smoke
+          trap 'docker rm -f flowbase-smoke flowbase-v1-smoke >/dev/null 2>&1 || true' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent --max-time 2 http://127.0.0.1:19091/version.json >/dev/null; then break; fi
+            if [ "$attempt" -eq 30 ]; then docker logs flowbase-v1-smoke; exit 1; fi
+            sleep 1
+          done
+          curl --fail --silent http://127.0.0.1:19091/version.json | python3 -c 'import json,sys;assert json.load(sys.stdin)["version"]=="v1"'

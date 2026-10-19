@@ -1,9 +1,25 @@
 <!doctype html>
 <html lang="ja">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FlowBase Checkout</title><link rel="stylesheet" href="/style.css"></head>
-<body><main><header>FLOWBASE / WEB STORE</header><h1>購入フロー</h1>
-<section class="item"><span>デモ用ヘッドフォン</span><strong>¥12,800</strong></section>
-<p id="feature"></p><button type="button" id="next">読み込み中…</button>
-<p id="result" aria-live="polite">未購入</p><footer>デモ画面です。決済・個人情報送信は行いません。</footer></main>
-<script src="/main.js" defer></script></body></html>
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FlowBase Checkout</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main>
+  <section class="environment-bar" id="environment-bar" aria-label="デモ環境情報" data-environment="unknown">
+    <div class="environment-info"><span class="eyebrow">FLOWBASE / CHECKOUT</span><strong id="environment-name">環境読み込み中</strong><span class="environment-note">デモ用 環境情報</span></div>
+    <div class="version-info"><span class="eyebrow">RELEASE VERSION</span><strong id="app-version">--</strong></div>
+  </section>
+  <div class="content">
+    <h1>購入フロー</h1>
+    <section class="item"><span>デモ用ヘッドフォン</span><strong>¥12,800</strong></section>
+    <p id="feature"></p>
+    <div id="flow-preview" class="flow-preview" aria-label="購入手続きの流れ"></div>
+    <button type="button" id="next">読み込み中…</button>
+    <p id="result" aria-live="polite">未購入</p>
+    <footer>デモ画面です。決済・個人情報送信は行いません。</footer>
+  </div>
+</main>
+<script src="/environment-banner.js" defer></script>
+<script src="/main.js" defer></script>
+</body></html>
