@@ -17,6 +17,7 @@ jobs:
           node --check public/environment-banner.js
           node --check demo/v1/main.js
           python3 tests/test_visual.py
+          python3 tests/test_ui_v12.py
       - name: Docker build and live HTTP test
         run: |
           docker build -t flowbase-web:ci .
